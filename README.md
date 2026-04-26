@@ -9,6 +9,14 @@ The project contains two custom Hermes dashboard themes:
 
 ## Preview
 
+### Studio Grid
+
+![Studio Grid light theme preview](studio-grid.png)
+
+### Studio Grid Dark
+
+![Studio Grid dark theme preview](studio-grid-dark.png)
+
 These themes are designed for the official Hermes web dashboard, including pages like:
 
 - Analytics
