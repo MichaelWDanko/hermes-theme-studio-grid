@@ -1,0 +1,199 @@
+name: studio-grid-dark
+label: Studio Grid Dark
+description: Inverted Studio Grid theme with deep navy surfaces, light text, blue grid accents, and teal analytics highlights.
+
+palette:
+  background:
+    hex: "#061225"
+    alpha: 1
+  midground:
+    hex: "#eaf3ff"
+    alpha: 1
+  foreground:
+    hex: "#60a5fa"
+    alpha: 0.22
+  warmGlow: "rgba(96, 165, 250, 0.22)"
+  noiseOpacity: 0
+
+typography:
+  fontSans: "Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif"
+  fontMono: "JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace"
+  fontDisplay: "Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif"
+  fontUrl: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+  baseSize: "14px"
+  lineHeight: "1.55"
+  letterSpacing: "-0.01em"
+
+layout:
+  radius: "0.875rem"
+  density: comfortable
+
+colorOverrides:
+  card: "#0b1f3a"
+  cardForeground: "#eaf3ff"
+  popover: "#0b1f3a"
+  popoverForeground: "#eaf3ff"
+  primary: "#dbeafe"
+  primaryForeground: "#061225"
+  secondary: "#12345f"
+  secondaryForeground: "#dbeafe"
+  muted: "#10294a"
+  mutedForeground: "#9fb4cf"
+  accent: "#1d4ed8"
+  accentForeground: "#ffffff"
+  success: "#34d399"
+  warning: "#fbbf24"
+  destructive: "#f87171"
+  destructiveForeground: "#061225"
+  border: "#25486f"
+  input: "#315985"
+  ring: "#60a5fa"
+
+assets:
+  bg: "none"
+
+componentStyles:
+  card:
+    background: "linear-gradient(180deg, rgba(11,31,58,0.98) 0%, rgba(8,24,46,0.98) 100%)"
+    boxShadow: "0 18px 45px rgba(0, 0, 0, 0.34), 0 1px 0 rgba(255, 255, 255, 0.06) inset"
+  sidebar:
+    background: "linear-gradient(180deg, rgba(7,23,45,0.98) 0%, rgba(6,18,37,0.98) 100%)"
+  header:
+    background: "rgba(7,23,45,0.92)"
+  backdrop:
+    fillerOpacity: "0"
+    fillerBlendMode: "normal"
+  page:
+    background: "#061225"
+
+customCSS: |
+  :root {
+    color-scheme: dark;
+  }
+
+  body,
+  #root {
+    background: #061225 !important;
+  }
+
+  #root > div {
+    background:
+      linear-gradient(rgba(96, 165, 250, 0.075) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(96, 165, 250, 0.075) 1px, transparent 1px),
+      radial-gradient(circle at top right, rgba(37, 99, 235, 0.24), transparent 34rem),
+      radial-gradient(circle at bottom left, rgba(20, 184, 166, 0.11), transparent 32rem),
+      #061225 !important;
+    background-size: 32px 32px, 32px 32px, auto, auto, auto !important;
+    color: #eaf3ff !important;
+    text-transform: none !important;
+  }
+
+  [aria-hidden="true"][class*="fixed"][class*="inset-0"] {
+    mix-blend-mode: normal !important;
+  }
+
+  aside[aria-label="Navigation"] {
+    color: #eaf3ff !important;
+    border-right: 1px solid #25486f !important;
+    box-shadow: 12px 0 36px rgba(0, 0, 0, 0.28);
+  }
+
+  aside[aria-label="Navigation"] * {
+    mix-blend-mode: normal !important;
+  }
+
+  aside[aria-label="Navigation"] a,
+  aside[aria-label="Navigation"] button {
+    color: #c7d7ed !important;
+    border-radius: 0.75rem;
+    margin: 0.1rem 0.65rem;
+    padding-left: 0.9rem !important;
+    padding-right: 0.9rem !important;
+  }
+
+  aside[aria-label="Navigation"] a:hover,
+  aside[aria-label="Navigation"] button:hover {
+    color: #ffffff !important;
+  }
+
+  aside[aria-label="Navigation"] a[aria-current="page"] {
+    background: #dbeafe !important;
+    color: #061225 !important;
+    box-shadow: 0 8px 20px rgba(96, 165, 250, 0.26);
+  }
+
+  aside[aria-label="Navigation"] a[aria-current="page"] svg,
+  aside[aria-label="Navigation"] a[aria-current="page"] span {
+    color: #061225 !important;
+  }
+
+  h1, h2, h3,
+  [class*="font-mondwest"],
+  [class*="font-bold"] {
+    font-family: var(--theme-font-display) !important;
+    letter-spacing: -0.02em !important;
+  }
+
+  main,
+  section,
+  [class*="bg-card"] {
+    color: #eaf3ff;
+  }
+
+  [class*="bg-card"],
+  [class*="border-border"] {
+    border-color: #25486f !important;
+  }
+
+  [class*="bg-card"] {
+    background: linear-gradient(180deg, rgba(11,31,58,0.98) 0%, rgba(8,24,46,0.98) 100%) !important;
+    box-shadow: 0 18px 45px rgba(0,0,0,0.34), 0 1px 0 rgba(255,255,255,0.06) inset;
+  }
+
+  button,
+  [role="button"] {
+    text-transform: none !important;
+  }
+
+  button[class*="bg-primary"],
+  [aria-pressed="true"],
+  [data-state="active"] {
+    background: #dbeafe !important;
+    color: #061225 !important;
+    border-color: #dbeafe !important;
+  }
+
+  .text-muted-foreground,
+  [class*="text-muted-foreground"] {
+    color: #9fb4cf !important;
+  }
+
+  [class*="bg-[#ffe6cb]"] {
+    background-color: #60a5fa !important;
+  }
+
+  [class*="text-[#ffe6cb]"] {
+    color: #93c5fd !important;
+  }
+
+  [class*="bg-emerald-500"],
+  [class*="bg-emerald-500/70"] {
+    background-color: #2dd4bf !important;
+  }
+
+  [class*="text-emerald-400"] {
+    color: #5eead4 !important;
+  }
+
+  .recharts-cartesian-grid line {
+    stroke: #25486f !important;
+  }
+
+  .recharts-bar-rectangle path,
+  .recharts-bar-rectangle rect {
+    fill: #60a5fa !important;
+  }
+
+  .recharts-line path {
+    stroke: #2dd4bf !important;
+  }
